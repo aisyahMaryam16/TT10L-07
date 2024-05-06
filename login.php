@@ -64,34 +64,4 @@ alert('username and password error');
     }
 ?>
 
-<html>
-    <link rel="stylesheet" href="button.css">
-    <link rel="stylesheet" href="form.css">
-    
-    <body>
-        <center>
-            <img src='TEXT1.png.png'><br>
-            <img src='TEXT2.png.png'>
-        </center>
-        <h3 class="short">LOG IN</h3>
-        <form class="short" action="login.php" method="post">
-            <table>
-            <tr>
-                <td><img src="user.png.png"></td>
-                <td>
-<input type="text" name="UserID" placeholder="UserID" required>
-</td>
-            </tr>
-            <tr>
-                    <td><img src="lock.png.png"></td>
-                    <td>
-<input type="password" name="password" placeholder="Passcode" required>
-</td>
-                </tr>
-                </table>
-                <button class="login" type="submit" name="submit">Login</button>
-                <button class="signup" type="button" onclick="window.location='signup.php'">
-Sign Up</button>
-            </form>
-        </body>
-    </html>
+ajsd
