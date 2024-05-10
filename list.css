@@ -1,0 +1,46 @@
+body {
+    background-image: url(robothome2.png);
+}
+
+table {
+    font-family: verdana;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    
+    width: 650px;
+    margin : 0px auto;
+    border-collapse: collapse;
+    box-shadow: 15px 15px 6px rgba();
+}
+
+caption {
+    font-size: 16px;
+    font-weight: bold;
+    color : floralwhite;
+    padding : 8px;
+}
+
+td, th {
+    padding: 8px;
+    border: 2px solid dimgrey;
+}
+
+td.name {
+    width: 150px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: darkgrey;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+}
+
+th {
+    font-weight: bold;
+    color:white;
+    background-color: darkgrey;
+}

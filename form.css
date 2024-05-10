@@ -1,0 +1,109 @@
+body {
+    background-image: url(robothome2.png);
+}
+
+h3 {
+    font-family: verdana;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color:mintcream;
+    
+    padding:5px 60px;
+    border-radius: 100px 100px 0 0;
+    margin: 50px auto 0px;
+    background-color:dimgrey;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+form {
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    color: black;
+    
+    padding: 60px;
+    border: 1px solid grey;
+    border-radius:0px 0px 20px 20px;
+    margin:1px auto;
+    background-color:rgba(192,192,192);
+    box-shadow: 0px 0px 6px 0px rgba(96, 96, 96, 0.7);
+}
+
+form.short, h3.short {
+    width:250px;
+}
+
+form.medium, h3.medium {
+    width:250px;
+}
+
+form.long, h3.long {
+    width:300px;
+}
+
+form.marks, h3.marks {
+    width:350px;
+}
+
+table {
+    font-family: verdana;
+    font-size: 12px;
+}
+/* cantumkan
+sekali
+
+*/
+input[type="text"],
+input[type="password"],
+select {
+    width: 200px;
+    padding:5px;
+    margin: 5px;
+    border: 2px solid white;
+    color: black;
+    border-radius: 15px;
+}
+
+input.marks{
+    width: 70px;
+    padding:3px;
+    margin: 2px;
+    text-align: center;
+}
+
+select.marks{
+    width: 200px;
+    padding:3px;
+    margin: 2px;
+}
+
+td.marks_{
+    font-weight: bold;
+    text-align: center;
+}
+
+td:nth-child(1) {
+    width: 100px;
+    text-align: left;
+}
+
+td:nth-child(2) {
+    width: 100px;
+    text-align: center;
+}
+
+td:nth-child(3) {
+    width: 150px;
+    text-align: center;
+}
+
+table.markah {
+    margin-top : 5px;
+    width : 430px;
+}
+
+th {
+    padding-bottom : 5px;
+}
