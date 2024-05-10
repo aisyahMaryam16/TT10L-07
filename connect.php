@@ -2,9 +2,9 @@
     $host = 'localhost';
     $user = 'root';
     $password = '';
-    $database = 'rcms';
+    $database = 'rocs';
     
-    $sambungan = mysqli_connect($host, $user,
+    $connect = mysqli_connect($host, $user,
     $password, $database)
     or die('connection failed');
    // echo "connection success";
