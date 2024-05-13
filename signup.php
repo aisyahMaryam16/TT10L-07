@@ -8,13 +8,13 @@
         $password = $_POST["password"];
 
     
-        $sql = "insert into Player values('$IcNumber', '$player', '$StewardID', 
+        $sql = "insert into player values('$IcNumber', '$player', '$StewardID', 
         '$SupervisorID', '$password')";
         $result = mysqli_query($connect, $sql);
         if ($result)
-            echo "<script>alert('Successfully Signed Up')</script>";
+            echo "<script>alert('successfully signed up')</script>";
         else
-            echo "<script>alert('Sign Up Was Unsuccessful')</script>";
+            echo "<script>alert('sign up was unsuccessful')</script>";
         echo "<script>window.location='login.php'</script>";
     }
 ?>
@@ -49,10 +49,10 @@
              <td>
                     <select name="StewardID">
                     <?php 
-                        $sql = "select * from Steward";
+                        $sql = "select * from steward";
                         $data = mysqli_query($connect, $sql);
-                        while ($Steward = mysqli_fetch_array($data)) {
-                            echo "<option value='$Steward[StewardID]'>$Steward[steward]</option>";
+                        while ($steward = mysqli_fetch_array($data)) {
+                            echo "<option value='$steward[StewardID]'>$steward[steward]</option>";
                         }
                     ?>
                     </select>
@@ -63,18 +63,18 @@
                 <td>
                     <select name="SupervisorID">
                     <?php
-                        $sql = "select * from Supervisor";
+                        $sql = "select * from supervisor";
                         $data = mysqli_query($connect, $sql);
-                        while ($Supervisor = mysqli_fetch_array($data)) {
+                        while ($supervisor = mysqli_fetch_array($data)) {
                             echo "<option 
-value='$Supervisor[SupervisorID]'>$Supervisor[supervisor]</option>";
+value='$supervisor[SupervisorID]'>$supervisor[supervisor]</option>";
                         }
                     ?>
                     </select>
                 </td>
             </tr>
         </table>
-        <button class="add" type="submit">Register</button>
-        <button class="delete" type="button" onclick="window.location='login.php'">Cancel</button>
+        <button class="add" type="submit">register</button>
+        <button class="delete" type="button" onclick="window.location='login.php'">cancel</button>
     </form>
     </body>
