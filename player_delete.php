@@ -1,5 +1,5 @@
 <?php 
-    include("sambungan.php"); 
+    include("connect.php"); 
     include("manager_menu.php"); 
      
     if (isset($_POST["submit"])) { 
