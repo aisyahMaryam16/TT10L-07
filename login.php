@@ -65,19 +65,19 @@ ob_start();
 ?>
 
 <html>
-    <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="button.css">
     
     <body>
         <center>
-            <img src='TEXT1.png.png'><br>
-            <img src='TEXT2.png.png'>
+            <img src=''><br>
+            <img src=''>
         </center>
         <h3 class="short">LOG IN</h3>
         <form class="short" action="login.php" method="post">
             <table>
             <tr>
-                <td><img src="user.png.png"></td>
+                <td><img src=""></td>
             <td>
         <input type="text" name="UserID" placeholder="UserID" required>
             </td>
