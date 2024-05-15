@@ -23,15 +23,15 @@
 <link rel="stylesheet" href="button.css">
 <body>
     <center>
-        <img src='TEXT1.png.png'><br>
-        <img src='TEXT2.png.png'>
+        <img src=''><br>
+        <img src=''>
     </center>
     
     <h3 class="long">SIGN UP</h3>
     <form class="long" action="signup.php" method="post">
         <table>
         <tr> 
-        <td class="colour">IcNumber</td> 
+        <td class="colour">Ic Number</td> 
         <td><input required type = "text" name = "IcNumber" placeholder = "xxxxxxxxxxxx" 
                    pattern = "[0-9]{12}" oninvalid = "this.setCustomValidity('Please insert 12 numbers')" oninput = "this.setCustomValidity('')"></td> 
         </tr>
