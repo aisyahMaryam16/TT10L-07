@@ -1,22 +1,22 @@
 <?php 
     include("connect.php"); 
-    include("manager_menu.php"); 
+    include("supervisor_menu.php"); 
      
     if (isset($_POST["submit"])) { 
         $IcNumber = $_POST["IcNumber"]; 
          
-        $sql = "delete from contestant where IcNumber = '$IcNumber'"; 
-        $result = mysqli_query($sambungan, $sql); 
+        $sql = "delete from player where IcNumber = '$IcNumber'"; 
+        $result = mysqli_query($connect, $sql); 
         if ($result == true) { 
-            $bilrekod = mysqli_affected_rows($sambungan); 
+            $bilrekod = mysqli_affected_rows($connect); 
             if($bilrekod > 0) 
                 echo "<script>alert('successfully deleted'); 
-                window.location='contestant_list.php'</script>"; 
+                window.location='player_list.php'</script>"; 
             else 
                 echo "Unable to delete. No record was found."; 
         } 
         else 
-            echo "<br><center>Error : $sql<br>".mysqli_error($sambungan)."</center>"; 
+            echo "<br><center>Error : $sql<br>".mysqli_error($connect)."</center>"; 
         } 
          
          
@@ -28,8 +28,8 @@
     <link rel="stylesheet" href="form.css"> 
     <link rel="stylesheet" href="button.css"> 
      
-    <h3 class="long">Delete contestant</h3> 
-    <form class="long" action="contestant_delete.php" method="post"> 
+    <h3 class="long">Delete player</h3> 
+    <form class="long" action="player_delete.php" method="post"> 
         <table> 
             <tr> 
                 <td>IcNumber</td> 
