@@ -1,5 +1,5 @@
 <?php
-    include9"connect.php");
+    include("connect.php");
     include("supervisor_menu.php");
 
     if (isset($POST["submit"])) {
