@@ -4,18 +4,18 @@
     <body> 
         <table> 
             <?php 
-                include('sambungan.php'); 
-                include("manager_menu.php"); 
+                include('connect.php'); 
+                include("supervisor_menu.php"); 
                  
                 $choice = $_POST["choice"]; 
                 $header = " <tr> 
                             <th>No</th> 
                             <th>Name</th>"; 
                              
-                $sql = "select * from criteria order by CriteriaID asc"; 
-                $data = mysqli_query($sambungan, $sql); 
-                while ($criteria= mysqli_fetch_array($data)) { 
-                    $header = $header."<th>".$criteria['CriteriaName']."</th>"; 
+                $sql = "select * from aspect order by AspectID asc"; 
+                $data = mysqli_query($connect, $sql); 
+                while ($aspect= mysqli_fetch_array($data)) { 
+                    $header = $header."<th>".$aspect['AspectName']."</th>"; 
                 } 
                 $header = $header."<th>Score</th></tr>"; 
                  
@@ -23,11 +23,11 @@
                     case 1 : $requirement = " "; 
                         $title = " <caption>FULL LIST OF MARKS</caption> "; 
                         break; 
-                    case 2 : $JudgeID = $_POST["JudgeID"];
-                        $requirement = "where judge.JudgeID = '$JudgeID' "; 
-                        $title = " <caption>LIST OF CONTESTANTS BY FOLLOWING JUDGE</caption> "; 
+                    case 2 : $StewardID = $_POST["StewardID"];
+                        $requirement = "where steward.StewardID = '$StewardID' "; 
+                        $title = " <caption>LIST OF PLAYERS BY FOLLOWING STEWARD</caption> "; 
                         break; 
-                } // tamat switch 
+                } 
                  
                 echo $header; 
                 $No = 1; 
