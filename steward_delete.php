@@ -1,41 +1,41 @@
  <?php
-    include("sambungan.php");
-    include("manager_menu.php");
+    include("connect.php");
+    include("supervisor_menu.php");
     
     if (isset($_POST["submit"])) {
-        $JudgeID = $_POST["JudgeID"];
+        $StewardID = $_POST["StewardID"];
         
-        $sql = "delete from judge where JudgeID = '$JudgeID'
+        $sql = "delete from steward where StewardID = '$StewardID'
 ";
-        $result = mysqli_query($sambungan, $sql);
+        $result = mysqli_query($connect, $sql);
         if ($result == true) {
-            $bilrekod = mysqli_affected_rows($sambungan);
+            $bilrekod = mysqli_affected_rows($connect);
             if ($bilrekod > 0) 
                 echo "<script>alert('successfully deleted');
-                window.location='judge_list.php'</script>";
+                window.location='steward_list.php'</script>";
             else
                 echo "<script>alert('Unable to delete. No record was found');
-                window.location='judge_list.php'</script>";
+                window.location='steward_list.php'</script>";
         }
         else
-            echo "<br><center>Error : $sql<br>".mysqli_error($sambungan)."</center>";
+            echo "<br><center>Error : $sql<br>".mysqli_error($connect)."</center>";
     }
     
     
-    if (isset($_GET['JudgeID']))
-        $JudgeID = $_GET['JudgeID'];
+    if (isset($_GET['StewardID']))
+        $StewardID = $_GET['StewardID'];
 ?>
 
 
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="button.css">
 
-<h3 class="long">DELETE JUDGE</h3>
-<form class="long" action="judge_delete.php" method="post">
+<h3 class="long">DELETE STEWARD</h3>
+<form class="long" action="steward_delete.php" method="post">
     <table>
         <tr>
-           <td>JudgeID</td>
-           <td><input type="text" name="JudgeID" value = "<?php echo $JudgeID; ?>" ></td>
+           <td>StewardID</td>
+           <td><input type="text" name="StewardID" value = "<?php echo $StewardID; ?>" ></td>
         </tr>
     </table>
     <button class="delete" type="submit" name="submit">Delete</button>
