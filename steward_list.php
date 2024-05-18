@@ -1,6 +1,6 @@
 <?php
-    include ('sambungan.php');
-    include("manager_menu.php");
+    include ('connect.php');
+    include("supervisor_menu.php");
     
 ?>
 
@@ -8,25 +8,25 @@
 <link rel="stylesheet" href="list.css">
 
 <table>
-    <caption>JUDGE LIST</caption>
+    <caption>STEWARD LIST</caption>
     <tr>
-        <th>Judge ID</th>
+        <th>Steward ID</th>
         <th>Name</th>
-        <th>Passcode</th>
+        <th>Password</th>
         <th colspan="2">Remarks</th>
     </tr>
     
     
 <?php
-    $sql = "select * from judge";
-    $result = mysqli_query($sambungan, $sql);
-    while($judge = mysqli_fetch_array($result)) {
+    $sql = "select * from steward";
+    $result = mysqli_query($connect, $sql);
+    while($steward = mysqli_fetch_array($result)) {
         echo "<tr>
-            <td>$judge[JudgeID]</td>
-            <td>$judge[JudgeName]</td>
-            <td>$judge[Passcode]</td>
-            <td><a href='judge_update.php?JudgeID=$judge[JudgeID]'>update</a></td>
-            <td><a href='judge_delete.php?JudgeID=$judge[JudgeID]'>delete</a></td>
+            <td>$steward[StewardID]</td>
+            <td>$steward[StewardName]</td>
+            <td>$steward[Password]</td>
+            <td><a href='steward_update.php?StewardID=$steward[StewardID]'>update</a></td>
+            <td><a href='steward_delete.php?StewardID=$steward[StewardID]'>delete</a></td>
         </tr>";
     }
 ?>
