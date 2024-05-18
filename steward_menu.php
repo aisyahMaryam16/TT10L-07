@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="menu.css">
 <body>
 <div class="menu">
-    <div class="judge">
+    <div class="steward">
         <h2>ROBOTICS COMPETITION MANAGEMENT SYSTEM</h2>
         <ul>
             <li>
-<a href="judge_home.php">
+<a href="steward_home.php">
 <b>HOME</b></a>
 </li>
         </ul>
@@ -14,7 +14,7 @@
 <a href="#">
 <b>FORM</b></a>
                 <ul>
-                    <li><a href="judge_form.php">Show</a></li>
+                    <li><a href="steward_form.php">Show</a></li>
                 </ul>
             </li>
         </ul>
@@ -23,7 +23,7 @@
 <a href="#">
 <b>LIST</b></a>
                 <ul>
-                    <li><a href="judge_contestant.php">Show</a></li>
+                    <li><a href="steward_contestant.php">Show</a></li>
                 </ul>
             </li>
         </ul>
