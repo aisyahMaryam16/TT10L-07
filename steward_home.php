@@ -1,4 +1,4 @@
 <?php
-    include("judge_menu.php");
+    include("steward_menu.php");
     include("home.php");
 ?>
