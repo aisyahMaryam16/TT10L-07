@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include('sambungan.php');
-    include("judge_menu.php");
+    include('connect.php');
+    include("steward_menu.php");
 ?>
 
 <html>
@@ -10,7 +10,7 @@
 
 <body>
 <table>
-<caption>LIST OF CONTESTANTS BY FOLLOWING JUDGE</caption>
+<caption>LIST OF PLAYERS BY FOLLOWING STEWARD</caption>
 
 <?php
     $name = $_SESSION["name"];
@@ -19,31 +19,31 @@
     $header = " <tr><th>No</th>
                     <th>Name</th>";
                     
-    $sql = "select * from criteria order by CriteriaID asc";
+    $sql = "select * from aspect order by AspectID asc";
     
-    $data = mysqli_query($sambungan, $sql);
-    while ($criteria = mysqli_fetch_array($data)) {
-        $header = $header."<th>".$criteria['CriteriaName']."</th>";
+    $data = mysqli_query($connect, $sql);
+    while ($aspect = mysqli_fetch_array($data)) {
+        $header = $header."<th>".$aspect['AspectName']."</th>";
     }
     $header = $header."<th>Score</th></tr>";
     
     echo $header;
     $No = 1;
     $sql = "select * from result
-    join contestant on result.IcNumber = contestant.IcNumber
-    join criteria on result.CriteriaID = criteria.CriteriaID
-    join judge on contestant.JudgeID = judge.JudgeID where judge.JudgeID = '$JudgeID'
+    join player on result.IcNumber = player.IcNumber
+    join aspect on result.AspectID = aspect.AspectID
+    join steward on player.StewardID = steward.StewardID where steward.StewardID = '$StewardID'
     
-    order by result.Score desc, criteria.CriteriaID asc
+    order by result.Score desc, aspect.AspectID asc
     ";
-    $data = mysqli_query($sambungan, $sql);
+    $data = mysqli_query($connect, $sql);
     $a = 1;
     $No = 1;
     while ($result = mysqli_fetch_array($data)) {
         if ($a == 1)
             echo "<tr>
             <td>".$No."</td>
-            <td>".$result['ContestantName']."</td>";
+            <td>".$result['PlayerName']."</td>";
             
         if ($a < 4)
             echo "<td>".$result['ScoreObtained']."</td>";
@@ -55,7 +55,7 @@
             $a = 1;
             $No = $No + 1;
         } 
-    }  // tamat while
+    }  
 ?>
 </table>
 </body>
