@@ -8,8 +8,8 @@
         $sql = "delete from player where IcNumber = '$IcNumber'"; 
         $result = mysqli_query($connect, $sql); 
         if ($result == true) { 
-            $bilrekod = mysqli_affected_rows($connect); 
-            if($bilrekod > 0) 
+            $total = mysqli_affected_rows($connect); 
+            if($total > 0) 
                 echo "<script>alert('successfully deleted'); 
                 window.location='player_list.php'</script>"; 
             else 
