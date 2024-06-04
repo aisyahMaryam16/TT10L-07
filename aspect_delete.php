@@ -30,9 +30,9 @@
    <form class="long" action="aspect_delete.php" method="post">
        <table>
         <tr>
-            <td>Aspect</td>
+            <td>ID</td>
             <td><input type="text" name="AspectID" value = "<?php echo $AspectID; ?>" ></td>
         </tr>
        </table>
        <button class="delete" type="submit" name="submit">Delete</button>
-   </form>>>
+   </form>
