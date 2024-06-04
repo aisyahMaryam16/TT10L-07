@@ -14,7 +14,7 @@
             echo "<script>alert('successfully added');
             window.location='aspect_list.php'</script>";
         else
-            echo "<br><center>Error : $sql<br>".mysqli_error($connect)."</center>";
+            echo "<br><center>Error: $sql<br>".mysqli_error($connect)."</center>";
     }
 ?>
    

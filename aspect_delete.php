@@ -27,6 +27,15 @@
 <link rel="stylesheet" href="button.css">
    
 <h3 class="long">DELETE ASPECT</h3>
+   <form class="long" action="aspect_delete.php" method="post">
+       <table>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="AspectID" value = "<?php echo $AspectID; ?>" ></td>
+        </tr>
+       </table>
+       <button class="delete" type="submit" name="submit">Delete</button>
+</form>
 <form class="long" action="aspect_delete.php" method="post">
     <table>
     <tr>
