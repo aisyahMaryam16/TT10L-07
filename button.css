@@ -15,7 +15,7 @@ button {
 }
 
 button.login {
-    background-image: url(login.png.png);
+    background-image: url(login.png);
 }
 
 button.signup {
