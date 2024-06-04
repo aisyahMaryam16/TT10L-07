@@ -12,7 +12,7 @@
                 echo "<script>alert('successfully deleted');
                 window.location='aspect_list.php</script>";
             else
-                echo "<script>alert('unable to delete. No record was found.');
+                echo "<script>alert('Unable to delete. No record was found.');
                 window.location='aspect_list.php'</script>";
         }
     else
@@ -35,4 +35,13 @@
         </tr>
        </table>
        <button class="delete" type="submit" name="submit">Delete</button>
-   </form>
+</form>
+<form class="long" action="aspect_delete.php" method="post">
+    <table>
+    <tr>
+        <td>Aspect ID</td>
+        <td><input type="text" name="AspectID" value = "<?php echo $AspectID; ?>" ></td>
+    </tr>
+    </table>
+    <button class="delete" type="submit" name="submit">Delete</button>
+</form>
