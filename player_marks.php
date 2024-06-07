@@ -36,8 +36,8 @@
             join aspect on result.AspectID = aspect.AspectID 
             where IcNumber = '$IcNumber' "; 
         $data = mysqli_query($connect, $sql); 
-        $bilrekod = mysqli_num_rows($data); 
-        if ($bilrekod > 0)  
+        $total = mysqli_num_rows($data); 
+        if ($total > 0)  
 { 
             while ($result = mysqli_fetch_array($data))  
 { 
