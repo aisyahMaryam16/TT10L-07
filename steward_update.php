@@ -4,9 +4,9 @@
     if (isset($_POST["submit"])) {
         $StewardID = $_POST["StewardID"];
         $StewardName = $_POST["StewardName"];
-        $Password = $_POST["Password"];
+        $password = $_POST["password"];
         
-        $sql = "update steward set Password='$Password', StewardName = 'StewardName'
+        $sql = "update steward set password='$password', StewardName = 'StewardName'
                 where StewardID = '$StewardID'
 ";
        $result = mysqli_query($connect, $sql);
@@ -25,7 +25,7 @@
 ";
     $result = mysqli_query($connect, $sql);
     while($steward = mysqli_fetch_array($result)) {
-        $Password = $steward['Password'];
+        $password = $steward['password'];
         $StewardName = $steward['StewardName'];
     }
 ?>
@@ -48,7 +48,7 @@
         </tr>
            <tr>
             <td>Password</td>
-            <td><input type="text" name="Password" value= "<?php echo $Password; ?>" ></td>
+            <td><input type="text" name="password" value= "<?php echo $password; ?>" ></td>
         </tr>
 </table>
  <button class="update" type="submit" name="submit">Update</button>
