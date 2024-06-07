@@ -6,9 +6,9 @@
     if (isset($_POST["submit"])) {
         $StewardID = $_POST["StewardID"];
         $StewardName = $_POST["StewardName"];
-        $Password = $_POST["Password"];
+        $password = $_POST["password"];
         
-        $sql = "insert into steward values('$StewardID', '$StewardName', '$Password')";
+        $sql = "insert into steward values('$StewardID', '$StewardName', '$password')";
         
         $result = mysqli_query($connect, $sql);
         if ($result == true)
@@ -32,11 +32,11 @@
         </tr>
         <tr>
             <td>Steward Name</td>
-            <td><input type="text" name="JudgeName"></td>
+            <td><input type="text" name="StewardName"></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><input type="text" name="Password"></td>
+            <td><input type="text" name="password"></td>
         </tr>
     </table>
     <button class="add" type="submit" name="submit" >Add</button>
