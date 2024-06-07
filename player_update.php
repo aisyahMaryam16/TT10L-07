@@ -5,11 +5,11 @@
     if (isset($_POST["submit"])) { 
         $IcNumber = $_POST["IcNumber"]; 
         $PlayerName = $_POST["PlayerName"]; 
-        $Password = $_POST["Password"]; 
+        $password = $_POST["password"]; 
         $StewardID = $_POST["StewardID"]; 
         $SupervisorID = $_POST["SupervisorID"]; 
          
-         $sql = "update player set Password = '$Password', PlayerName = '$PlayerName', 
+         $sql = "update player set password = '$password', PlayerName = '$PlayerName', 
                 StewardID = '$StewardID', SupervisorID = '$SupervisorID' 
 where IcNumber = '$IcNumber' "; 
                  
@@ -29,7 +29,7 @@ where IcNumber = '$IcNumber' ";
         $result = mysqli_query($connect, $sql); 
         while($player = mysqli_fetch_array($result)) { 
             $PlayerName = $player['PlayerName']; 
-            $Password = $player['Password']; 
+            $password = $player['password']; 
             $StewardID = $player['StewardID']; 
             $SupervisorID = $player['SupervisorID']; 
          } 
@@ -51,7 +51,7 @@ where IcNumber = '$IcNumber' ";
             </tr> 
             <tr> 
                 <td>Password</td> 
-                <td><input type="text" name="Password" value= "<?php echo $Password; ?>" ></td> 
+                <td><input type="text" name="password" value= "<?php echo $password; ?>" ></td> 
             </tr> 
             <tr>  
                 <td>StewardID</td> 
