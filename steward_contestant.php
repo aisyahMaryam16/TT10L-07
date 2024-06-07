@@ -14,7 +14,7 @@
 
 <?php
     $name = $_SESSION["name"];
-    $JudgeID = $_SESSION['UserID'];
+    $StewardID = $_SESSION['UserID'];
     
     $header = " <tr><th>No</th>
                     <th>Name</th>";
