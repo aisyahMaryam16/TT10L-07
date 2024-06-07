@@ -4,12 +4,12 @@
      
     if (isset($_POST["submit"])) { 
         $IcNumber = $_POST["IcNumber"]; 
-        $Password = $_POST["Password"]; 
-        $Player = $_POST["Player"]; 
+        $password = $_POST["password"]; 
+        $player = $_POST["player"]; 
         $StewardID = $_POST["StewardID"]; 
         $SupervisorID = $_POST["SupervisorID"]; 
-        $sql = "insert into player values('$IcNumber', '$Player', '$StewardID', '$SupervisorID',  
-         '$Password')"; 
+        $sql = "insert into player values('$IcNumber', '$player', '$StewardID', '$SupervisorID',  
+         '$password')"; 
         $result = mysqli_query($connect, $sql); 
         if ($result == true) 
             echo "<script>alert('Successfully added'); 
@@ -21,7 +21,7 @@
  
 <link rel="stylesheet" href="form.css"> 
 <link rel="stylesheet" href="button.css"> 
-<h3 class="long">Add Contestant</h3> 
+<h3 class="long">Add Player</h3> 
 <form class="long" action="player_insert.php" method="post"> 
     <table> 
         <tr> 
@@ -36,7 +36,7 @@
         </tr> 
         <tr> 
             <td class="colour">Password</td> 
-            <td><input type="text" name="Password"></td> 
+            <td><input type="text" name="password"></td> 
         </tr> 
         <tr> 
             <td class="colour">Steward Name</td> 
