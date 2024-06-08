@@ -19,55 +19,39 @@ button.login {
 }
 
 button.signup {
-    background-image: url(signup.png.png);
+    background-image: url(signup.png);
 }
 
 button.import {
-    background-image: url(import.png.png);
+    background-image: url(import.png);
 }
 
 button.add {
-    background-image: url(add.png.png);
+    background-image: url(add.png);
 }
 
 button.save {
-    background-image: url(save.png.png);
+    background-image: url(save.png);
 }
 
 button.delete {
-    background-image: url(cancel.png.png);
+    background-image: url(delete.png);
 }
 
 button.update {
-    background-image: url(update.png.png);
-}
-
-button.red {
-    background-image: url(imej/merah.png);
-}
-
-button.blue {
-    background-image: url(imej/biru.png);
-}
-
-button.green {
-    background-image: url(imej/hijau.png);
-}
-
-button.black {
-    background-image: url(imej/hitam.png);
+    background-image: url(update.png);
 }
 
 button.print {
-    background-image: url(print.png.png);
+    background-image: url(print.png);
 }
 
 button.show {
-    background-image: url(monitor.png.png);
+    background-image: url(monitor.png);
 }
 
 button.search {
-    background-image: url(search.png.png);
+    background-image: url(search.png);
 }
 
 button:hover {
