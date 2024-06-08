@@ -7,8 +7,8 @@
         $sql = "delete from aspect where AspectID = '$AspectID'";
         $result  = mysqli_query($connect, $sql);
         if ($result == true) {
-            $NO = mysqli_affected_rows($connect);
-            if ($NO > 0)
+            $No = mysqli_affected_rows($connect);
+            if ($No > 0)
                 echo "<script>alert('successfully deleted');
                 window.location='aspect_list.php</script>";
             else
