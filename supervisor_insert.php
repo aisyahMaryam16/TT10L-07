@@ -8,7 +8,13 @@
         $paswword = $_POST["password"];
         $supervisor = $_POST["supervisor"];
         
-        $sql = "insert into supervisor values)'$SupervisorID', '$supervisor', '$password')";
+        //Escape the input to prevent SQL injection
+        $SupervisorID = mysqli_real_escape_string($connect, $SupervisorID);
+        $password = mysqli_real_escape_string($connect, $password);
+        $supervisor = mysqli_real_escape_string($connect, $supervisor);
+        
+        $sql = "INSERT INTO supervisor (SupervisorID, supervisor, password) VALUES
+        ('$SupervisorID', '$supervisor', '$password')";
         $result = mysqli_query($connect, $sql);
         if ($result == true)
             echo "<script>alert('successfully added');

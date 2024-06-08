@@ -66,6 +66,7 @@ if (isset($_POST["submit"])) {
                 
             <table>
                 <tr>
+                    <td>Table</td>
                     <td>
                         <select name="tablename">
                             <option>player</option>

@@ -123,13 +123,13 @@ alert('username and password error');
         <form class="short" action="login.php" method="post">
             <table>
             <tr>
-                <td><img src=""></td>
+                <td><img src="user.png"></td>
             <td>
         <input type="text" name="UserID" placeholder="UserID" required>
             </td>
             </tr>
             <tr>
-                <td><img src="lock.png.png"></td>
+                <td><img src="lock.png"></td>
             <td>
         <input type="password" name="password" placeholder="Passcode" required>
             </td>
