@@ -21,6 +21,9 @@
                         echo "<option value='$player[IcNumber]'>$player[IcNumber] : 
                             $player[player]</option>"; 
                     } // tamat while 
+
+                            $player[PlayerName]</option>"; 
+                    } 
                 ?> 
             </select> 
         </td> 
