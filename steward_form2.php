@@ -16,6 +16,6 @@
             echo "<script>alert('Successfully added');
            window.location='steward_contestant.php'</script>";
            else
-            echo "<br><center>Ralat : $sql<br>".mysqli_error($steward)."</center>";
+            echo "<br><center>error : $sql<br>".mysqli_error($steward)."</center>";
         } 
     ?>
