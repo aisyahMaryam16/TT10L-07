@@ -1,18 +1,30 @@
-<?php 
-    include('connect.php'); 
-    include("supervisor_menu.php"); 
-     
-    $IcNumber = $_POST['IcNumber']; 
-     
-    $sql = "select * from player where IcNumber = '$IcNumber'"; 
-    $result = mysqli_query($connect, $sql); 
-    $player = mysqli_fetch_array($result); 
-     
-    $PlayerName = $player['PlayerName']; 
-    $StewardID = $player['StewardID']; 
-    $SupervisorID = $player['StewardID']; 
-    $Password = $player['Password']; 
-?> 
+<?php
+include('connect.php');
+include("supervisor_menu.php");
+
+if (isset($_POST['IcNumber'])) {
+    $IcNumber = $_POST['IcNumber'];
+
+    $stmt = $connect->prepare("SELECT * FROM player WHERE IcNumber = ?");
+    $stmt->bind_param("s", $IcNumber);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $playerData = $result->fetch_assoc();
+
+    if ($playerData) {
+        $playerName = $playerData['player'];
+        $StewardID = $playerData['StewardID'];
+        $SupervisorID = $playerData['SupervisorID'];
+        $password = $playerData['password']; // Note: you should not store passwords in plain text
+    } else {
+        echo "Player not found";
+        exit;
+    }
+} else {
+    echo "IcNumber is required";
+    exit;
+}
+?>
  
 <link rel="stylesheet" href="list.css"> 
 <table> 
