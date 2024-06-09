@@ -2,7 +2,7 @@
 <body>
 <div class="menu">
     <div class="steward">
-        <h2>ROBOTICS COMPETITION MANAGEMENT SYSTEM</h2>
+        <h2>RACE OF CHAMPIONS COMPETITION SYSTEM</h2>
         <ul>
             <li>
 <a href="steward_home.php">
@@ -23,7 +23,7 @@
 <a href="#">
 <b>LIST</b></a>
                 <ul>
-                    <li><a href="steward_contestant.php">Show</a></li>
+                    <li><a href="steward_player.php">Show</a></li>
                 </ul>
             </li>
         </ul>
