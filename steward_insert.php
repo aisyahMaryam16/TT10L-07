@@ -8,6 +8,11 @@
         $StewardName = $_POST["StewardName"];
         $password = $_POST["password"];
         
+                // Escape the input to prevent SQL injection
+        $StewardID = mysqli_real_escape_string($connect, $StewardID);
+        $steward = mysqli_real_escape_string($connect, $steward);
+        $password = mysqli_real_escape_string($connect, $password);
+        
         $sql = "insert into steward values('$StewardID', '$StewardName', '$password')";
         
         $result = mysqli_query($connect, $sql);
