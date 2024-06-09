@@ -8,6 +8,15 @@
         $player = $_POST["player"]; 
         $StewardID = $_POST["StewardID"]; 
         $SupervisorID = $_POST["SupervisorID"]; 
+        
+                // Escape the input to prevent SQL injection
+        $IcNumber = mysqli_real_escape_string($connect, $IcNumber);
+        $password = mysqli_real_escape_string($connect, $password);
+        $player = mysqli_real_escape_string($connect, $player);
+        $StewardID = mysqli_real_escape_string($connect, $StewardID);
+        $SupervisorID = mysqli_real_escape_string($connect, $SupervisorID);
+        
+        
         $sql = "insert into player values('$IcNumber', '$player', '$StewardID', '$SupervisorID',  
          '$password')"; 
         $result = mysqli_query($connect, $sql); 
@@ -66,28 +75,8 @@
     </tr> 
 </table> 
     <button class="add" type="submit" name="submit"> 
-        Add 
+       
     </button> 
 </form> 
-<br> 
- 
-     
-     
-<center> 
-    <button class="blue" onclick="change_colour(0)">Blue</button> 
-    <button class="green" onclick="change_colour(1)">Green</button> 
-    <button class="red" onclick="change_colour(2)">Red</button> 
-    <button class="black" onclick="change_colour(3)">Black</button> 
-</center> 
-     
-<script> 
-    function change_colour(n){ 
-     
-        var colour = ["Blue", "Green", "Red", "Black"]; 
-        var texts = document.getElementsByClassName("colour"); 
-        for(var i=0; i<texts.length; i++) 
-            teks[i].style.colour=warna[n]; 
-    }
-</script>
-    }
+
                    
