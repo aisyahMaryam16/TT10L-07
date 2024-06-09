@@ -1,10 +1,16 @@
 <?php
     include("connect.php");
     include("supervisor_menu.php");
+
     if (isset($_POST["submit"])) {
         $StewardID = $_POST["StewardID"];
         $StewardName = $_POST["StewardName"];
         $password = $_POST["password"];
+        
+                // Escape the input to prevent SQL injection
+        $StewardID = mysqli_real_escape_string($connect, $StewardID);
+        $steward = mysqli_real_escape_string($connect, $steward);
+        $password = mysqli_real_escape_string($connect, $password);
         
         $sql = "update steward set password='$password', StewardName = 'StewardName'
                 where StewardID = '$StewardID'
