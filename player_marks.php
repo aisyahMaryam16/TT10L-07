@@ -46,19 +46,18 @@
                     <td>$result[TotalMarks]</td> 
                     <td>$result[ScoreObtained]</td> 
                     </tr>"; 
-                $Score = $result['Score']; 
+                $total_marks = $result['Score']; 
             } 
-            echo "<tr class='Score'> <td ></td> 
-                    <td class='Score'>Score</td> 
-                    <td>$Score</td> 
+            echo "<tr class='total_marks'> <td ></td> 
+                    <td class='total_marks'>Total Marks</td> 
+                    <td>$total_marks</td> 
                     </tr>"; 
-            if ($kedudukan != 0) 
-                echo "<tr class='Score'><td ></td> 
-                    <td class='Score'>Place</td> 
-                    <td>$place/$bil</td> 
-                    </tr></table>"; 
-        } // if 
+            if ($position != 0) 
+                echo "<tr class='marks_total'><td ></td> 
+                    <td class='marks_total'>Position</td>
+                    <td>$position/$No</td>
+                    </tr></table>";
         else { 
-            echo "<tr ><td>marks</td><td>haven't</td><td>calculate</td> 
+            echo "<tr ><td>marks</td><td>haven't</td><td>calculated</td> 
                     </tr></table>"; 
         } ?>
