@@ -1,3 +1,4 @@
+steward_player.php
 <?php
     session_start();
     include('connect.php');
@@ -10,20 +11,20 @@
 
 <body>
 <table>
-<caption>LIST OF PLAYERS BY FOLLOWING STEWARD</caption>
+<caption>LIST OF PLAYER BY STEWARD</caption>
 
 <?php
     $name = $_SESSION["name"];
     $StewardID = $_SESSION['UserID'];
     
     $header = " <tr><th>No</th>
-                    <th>Name</th>";
+                    <th>name</th>";
                     
     $sql = "select * from aspect order by AspectID asc";
     
     $data = mysqli_query($connect, $sql);
     while ($aspect = mysqli_fetch_array($data)) {
-        $header = $header."<th>".$aspect['AspectName']."</th>";
+        $header = $header."<th>".$aspect['aspect']."</th>";
     }
     $header = $header."<th>Score</th></tr>";
     
@@ -43,7 +44,7 @@
         if ($a == 1)
             echo "<tr>
             <td>".$No."</td>
-            <td>".$result['PlayerName']."</td>";
+            <td>".$result['player']."</td>";
             
         if ($a < 4)
             echo "<td>".$result['ScoreObtained']."</td>";
@@ -55,10 +56,8 @@
             $a = 1;
             $No = $No + 1;
         } 
-    }  
+    }  // tamat while
 ?>
 </table>
 </body>
 </html>
-        
-        
