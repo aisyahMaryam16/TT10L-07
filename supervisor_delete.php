@@ -30,8 +30,8 @@
 <link rel="stylesheet" href="button.css">
 
 
-<h3 class="long">DELETE SUPERVISOR</h3>
-<form class="long" action="supervisor_delete.php" method="post">
+<h3 class="short">DELETE SUPERVISOR</h3>
+<form class="short" action="supervisor_delete.php" method="post">
     
 <table>
     <tr>
