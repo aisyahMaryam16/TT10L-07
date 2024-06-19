@@ -8,7 +8,6 @@
 
 
 <table>
-    <caption>ASPECT LIST</caption>
     <tr>
         <th>ID</th>
         <th>Aspect</th>
@@ -19,7 +18,8 @@
         $sql = "select * from aspect";
         $result = mysqli_query($connect, $sql);
         while($value = mysqli_fetch_array($result)) {
-            echo "<tr><td>$value[AspectID]</td>
+            echo "<tr>
+                <td>$value[AspectID]</td>
                 <td>$value[aspect]</td>
                 <td>$value[TotalMarks]</td>
                 <td><a href='aspect_update.php?AspectID=$value[AspectID]'>update</a></td>
