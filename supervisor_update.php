@@ -46,14 +46,14 @@ $password = $supervisor['password'];
 <link rel="stylesheet" href="button.css">
 
 
-<h3 class="long">SUPERVISOR UPDATE</h3>
+<h3 class="medium">SUPERVISOR UPDATE</h3>
 
 
-<form class="long" action="supervisor_update.php" method="post">
+<form class="medium" action="supervisor_update.php" method="post">
     <table>
      <tr>
         <td>Supervisor ID</td>
-        <td><input type="text" name="SupervisorID" value= "<?php echo $SupervisorID; ?>" ></td>
+            <td><input type="text" name="SupervisorID" value="<?php echo $SupervisorID; ?>" readonly></td>
     </tr>
     <tr>
         <td>Supervisor Name</td>
