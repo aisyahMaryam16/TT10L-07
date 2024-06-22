@@ -35,9 +35,9 @@
      
     <table class="marks"> 
         <tr> 
-            <th>Aspect Name</th> 
+            <th>Aspect</th> 
             <th>Total Marks</th> 
-            <th>Score Obtained</th> 
+            <th>ScoreObtained</th> 
         </tr> 
         <?php     
             $sql = "select * from aspect"; 
@@ -46,7 +46,7 @@
             echo "<tr > 
                    <td>$aspect[AspectName]</td> 
                    <td>$aspect[TotalMarks]</td> 
-                   <td><input oninput='count_Score()' class='marks' type='text' pattern = '[0-9]+'
+                   <td><input oninput='count_total()' class='marks' type='text' pattern = '[0-9]+'
                    id ='$aspect[AspectID]' name ='$aspect[AspectID]' value= 0 maxlength=2
                    required></td>  
                 </tr>";  
