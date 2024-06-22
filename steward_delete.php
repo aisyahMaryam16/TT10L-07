@@ -30,8 +30,8 @@
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="button.css">
 
-<h3 class="long">DELETE STEWARD</h3>
-<form class="long" action="steward_delete.php" method="post">
+<h3 class="short">DELETE STEWARD</h3>
+<form class="short" action="steward_delete.php" method="post">
     <table>
         <tr>
            <td>StewardID</td>
