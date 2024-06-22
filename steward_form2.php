@@ -14,8 +14,8 @@
         
         if ($result == true)
             echo "<script>alert('Successfully added');
-           window.location='steward_contestant.php'</script>";
+           window.location='steward_player.php'</script>";
            else
-            echo "<br><center>error : $sql<br>".mysqli_error($steward)."</center>";
+            echo "<br><center>error : $sql<br>".mysqli_error($connect)."</center>";
         } 
     ?>
