@@ -1,4 +1,5 @@
 button {
+
     font-family: verdana;
     font-weight: bold;
     font-size: 11px:
@@ -73,4 +74,31 @@ button.search {
 button:hover {
     background-color:darkgrey;
     cursor:pointer;
+
+  width: 35%;
+  height: 35px;
+  background: #f44336;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background 0.3s ease; 
+  position: relative;
+    top: 20px; /* Moves the button 10 pixels down from its normal position */
+    left: 2px;
+  
+}
+
+button:hover {
+  background: #e53935; 
+}
+
+button.print{
+    width: 150;
+    top: -450;
+
 }
