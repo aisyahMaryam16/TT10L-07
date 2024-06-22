@@ -1,5 +1,6 @@
-<?php 
-    include("player_menu.php"); 
+<?php
+    include("player_menu.php");
+
 ?>
 <html lang="en">
 <head>
