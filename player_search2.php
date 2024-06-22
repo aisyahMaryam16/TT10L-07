@@ -50,6 +50,6 @@ if (isset($_POST['IcNumber'])) {
     </tr> 
     <tr> 
         <td class="result">Password</td> 
-        <td class="result"><?php echo $Password; ?></td> 
+        <td class="password"><?php echo $password; ?></td> 
     </tr> 
 </table>
