@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.hall-of-fame {
+    text-align: center;
+    padding: 25px;
+    transform: translate(-50%, -50%);
+    margin-left: 15px;
+    transform: translateY(-700px);
+    color: white;
+}
+
+.hall-of-fame h1 {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    justify-items: center;
+}
+
+.grid-item {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    width: 450px; /* Example width */
+    height: 300px;
+}
+
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire grid item without distorting */
+    transform: scale(1.4); /* Slight zoom-in */
+    transition: transform 0.5s ease; /* Smooth zoom-in transition */
+}
+
+.caption {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    bottom: -20;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.grid-item:hover .overlay {
+    height: 100%;
+}
+
+.text {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 150;
+    left: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 20px;
+    line-height: 1.5;
+    max-height: 90%;
+    overflow-y: auto;
+    opacity: 0;
+     transition: opacity 0.5s ease; /* Smooth text appearance */
+
+}
+.grid-item:hover .text {
+    transform: translateY(0%);
+    opacity: 1; /* Show on hover */
+}
