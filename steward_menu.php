@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="menu.css">
 <body>
-<div class="menu">
-    <div class="steward">
-        <h2>RACE OF CHAMPIONS COMPETITION SYSTEM</h2>
-        <ul>
-            <li>
+<div class="banner">
+    <div class="navbar">
+<img src="f1logo.png" class="logo">
+<ul>
+ <li>
 <a href="steward_home.php">
 <b>HOME</b></a>
 </li>
