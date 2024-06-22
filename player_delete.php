@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="form.css"> 
     <link rel="stylesheet" href="button.css"> 
      
-    <h3 class="long">Delete player</h3> 
+    <h3 class="long">DELETE PLAYER</h3> 
     <form class="long" action="player_delete.php" method="post"> 
         <table> 
             <tr> 
