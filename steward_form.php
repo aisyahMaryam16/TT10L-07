@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="form.css"> 
 <link rel="stylesheet" href="button.css"> 
 <div class="content"> 
-    <h3 class="marks">SCORING FORM</h3> 
     <form class="marks" action="steward_form2.php" method="post"> 
     <table> 
         <tr> 
@@ -37,20 +36,20 @@
         <tr> 
             <th>Aspect</th> 
             <th>Total Marks</th> 
-            <th>ScoreObtained</th> 
+            <th>Score Obtained</th> 
         </tr> 
         <?php     
             $sql = "select * from aspect"; 
             $data = mysqli_query($connect, $sql); 
             while ($aspect = mysqli_fetch_array($data)) { 
             echo "<tr > 
-                   <td>$aspect[AspectName]</td> 
+                   <td>$aspect[aspect]</td> 
                    <td>$aspect[TotalMarks]</td> 
                    <td><input oninput='count_total()' class='marks' type='text' pattern = '[0-9]+'
                    id ='$aspect[AspectID]' name ='$aspect[AspectID]' value= 0 maxlength=2
                    required></td>  
                 </tr>";  
-            } 
+            } //tamat while 
         ?> 
         <tr class="total_marks"> 
                 <td></td> 
@@ -58,7 +57,7 @@
                 <td><input class="marks" type="text" id="total_marks" name="total_marks"></td> 
             </tr> 
         </table> 
-        <button class="Add" type="submit" name="submit">Add</button> 
+        <button class="add" type="submit" name="submit">Add</button> 
         </form> 
     </div> 
      
@@ -74,10 +73,10 @@
             while ($aspect = mysqli_fetch_array($data)) { 
                 echo "var marks = parseInt(document.getElementById('$aspect[AspectID]').value); 
                     tot_all = tot_all + marks;"; 
-            } 
+            } // tamat while 
         ?> 
         document.getElementById("total_marks").value = tot_all; 
          
-    } 
+    } //tamat function 
      
 </script>
