@@ -1,19 +1,18 @@
-steward_player.php
 <?php
-    session_start();
-    include('connect.php');
-    include("steward_menu.php");
+session_start();
+include('connect.php'); // Assuming this file contains your database connection settings
+include("steward_menu.php"); // Assuming this file contains menu or other UI elements
 ?>
 
 <html>
 <head>
-<link rel="stylesheet" href="list.css">
-<link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="button.css">
 </head>
 <body>
 <table class="styled-table">
 
-  <?php
+    <?php
     // Check if $_SESSION["name"] and $_SESSION["UserID"] are set
     if (!isset($_SESSION["name"]) || !isset($_SESSION["UserID"])) {
         // Handle session variables not set, redirect or display an error message
@@ -32,8 +31,10 @@ steward_player.php
         // Handle query error
         echo "<tr><td colspan='100'>Error fetching aspects: " . mysqli_error($connect) . "</td></tr>";
     } else {
+        $aspects = [];
         while ($aspect = mysqli_fetch_array($result)) {
             $header .= "<th>" . htmlspecialchars($aspect['aspect']) . "</th>"; // Use htmlspecialchars to prevent XSS
+            $aspects[] = $aspect['AspectID']; // Store aspect IDs for later use
         }
         $header .= "<th>Total Score</th></tr>";
 
@@ -42,7 +43,7 @@ steward_player.php
 
         // Fetch data for the table body
         $No = 1;
-        $sql = "SELECT player.player, result.ScoreObtained 
+        $sql = "SELECT player.player, aspect.AspectID, result.ScoreObtained 
                 FROM result
                 JOIN player ON result.IcNumber = player.IcNumber
                 JOIN aspect ON result.AspectID = aspect.AspectID
@@ -62,24 +63,32 @@ steward_player.php
         } else {
             $player = "";
             $total_score = 0;
+            $scores = array_fill_keys($aspects, '-'); // Initialize scores array for all aspects
 
             // Check if there are any rows returned
             if (mysqli_num_rows($data) > 0) {
                 while ($result = mysqli_fetch_array($data)) {
                     if ($result['player'] != $player) {
                         if ($player != "") {
-                            echo "<td>" . $total_score . "</td></tr>";
+                            foreach ($scores as $score) {
+                                echo "<td>" . $score . "</td>";
+                            }
+                            echo "<td>" . $total_score . "</td></tr>"; // Close the previous row
                         }
                         echo "<tr><td>" . $No . "</td><td>" . htmlspecialchars($result['player']) . "</td>";
                         $player = $result['player'];
                         $total_score = 0;
                         $No++;
+                        $scores = array_fill_keys($aspects, '-'); // Reset scores array for the new player
                     }
-                    echo "<td>" . $result['ScoreObtained'] . "</td>";
+                    $scores[$result['AspectID']] = $result['ScoreObtained'];
                     $total_score += $result['ScoreObtained'];
                 }
                 // Display total score for the last player
-                echo "<td>" . $total_score . "</td></tr>";
+                foreach ($scores as $score) {
+                    echo "<td>" . $score . "</td>";
+                }
+                echo "<td>" . $total_score . "</td></tr>"; // Close the last row
             } else {
                 // If no rows returned, display a message
                 echo "<tr><td colspan='100'>No data available</td></tr>";
