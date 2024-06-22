@@ -2,21 +2,21 @@
     include ('connect.php');
     include("supervisor_menu.php");
     
-?>
+    ?>
 
 
-<link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="list.css">
 
-<table>
+    <table>
     <tr>
-        <th> ID</th>
+        <th>ID</th>
         <th>Name</th>
         <th>Password</th>
         <th colspan="2">Action</th>
     </tr>
     
     
-  <?php
+    <?php
         $sql = "select * from steward";
         $result = mysqli_query($connect, $sql);
         while($steward = mysqli_fetch_array($result)) {
