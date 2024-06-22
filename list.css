@@ -1,5 +1,6 @@
 body {
     background-image: url(blackbrick.jpg);
+    overflow-x: hidden;
 }
 
 table {
