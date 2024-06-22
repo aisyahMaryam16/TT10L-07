@@ -1,6 +1,8 @@
 <html> 
+<head>
     <link rel="stylesheet" href="list.css"> 
     <link rel="stylesheet" href="button.css"> 
+</head>
     <body> 
         <table> 
             <?php 
