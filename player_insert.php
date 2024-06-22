@@ -45,7 +45,7 @@
         </tr> 
         <tr> 
             <td class="colour">Password</td> 
-            <td><input type="text" name="password"></td> 
+            <td><input type="text" name="password" required></td> 
         </tr> 
         <tr> 
             <td class="colour">Steward Name</td> 
