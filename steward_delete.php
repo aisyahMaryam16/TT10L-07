@@ -9,8 +9,8 @@
 ";
         $result = mysqli_query($connect, $sql);
         if ($result == true) {
-            $total = mysqli_affected_rows($connect);
-            if ($total > 0) 
+            $No = mysqli_affected_rows($connect);
+            if ($No > 0) 
                 echo "<script>alert('successfully deleted');
                 window.location='steward_list.php'</script>";
             else
