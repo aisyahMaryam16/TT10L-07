@@ -71,7 +71,6 @@
 value='$supervisor[SupervisorID]'>$supervisor[supervisor]</option>";
                         }
                     ?>
-<!-- Add your other options here -->
                     </select>
                 </div>
                 
