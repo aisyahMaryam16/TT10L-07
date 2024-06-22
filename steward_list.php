@@ -8,12 +8,11 @@
 <link rel="stylesheet" href="list.css">
 
 <table>
-    <caption>STEWARD LIST</caption>
     <tr>
-        <th>Steward ID</th>
+        <th> ID</th>
         <th>Name</th>
         <th>Password</th>
-        <th colspan="2">Remarks</th>
+        <th colspan="2">Action</th>
     </tr>
     
     
