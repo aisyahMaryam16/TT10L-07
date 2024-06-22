@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="list.css"> 
  
     <table> 
-    <caption>Player Name List</caption> 
     <tr> 
         <th>Ic Number</th> 
         <th>Player Name</th> 
