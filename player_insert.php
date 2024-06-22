@@ -61,7 +61,7 @@
         </td> 
     </tr> 
     <tr> 
-        <td class="colour">Supervisor Name</td> 
+        <td class="colour">Supervisor</td> 
         <td> <select name="SupervisorID"> 
             <?php 
                 $sql = "select * from supervisor"; 
