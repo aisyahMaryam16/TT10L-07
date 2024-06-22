@@ -30,12 +30,12 @@
  
 <link rel="stylesheet" href="form.css"> 
 <link rel="stylesheet" href="button.css"> 
-<h3 class="long">Add Player</h3> 
+<h3 class="long">ADD PLAYER</h3> 
 <form class="long" action="player_insert.php" method="post"> 
     <table> 
         <tr> 
             <td class="colour">Ic Number</td> 
-            <td><input required type = "text" name = "IcNumber" placeholder = "666666224444" pattern = "[0-9]{12}"  
+            <td><input required type = "text" name = "IcNumber" placeholder = "xxxxxxxxxxxx" pattern = "[0-9]{12}"  
             oninvalid = "this.setCustomValidity('Please insert 12 numbers')" oninput = "this.setCustomValidity('')"> 
             </td> 
         </tr> 
