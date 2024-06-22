@@ -40,8 +40,8 @@
             </td> 
         </tr> 
         <tr> 
-            <td class="colour">Player Name</td> 
-            <td><input type="text" name="PlayerName"></td> 
+            <td class="colour">Name</td> 
+            <td><input type="text" name="player" required></td> 
         </tr> 
         <tr> 
             <td class="colour">Password</td> 
