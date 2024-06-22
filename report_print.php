@@ -75,7 +75,6 @@
             $No++;
         }
             ?> 
-        <caption><?php echo $title; ?> </caption> 
         </table> 
         <center><button class="print" onclick="window.print()">Print</button></center> 
     </body> 
