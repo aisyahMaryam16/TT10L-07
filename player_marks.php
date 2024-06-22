@@ -42,14 +42,14 @@
             while ($result = mysqli_fetch_array($data))  
 { 
                 echo "<tr > 
-                    <td>$result[AspectName]</td> 
+                    <td>$result[aspect]</td> 
                     <td>$result[TotalMarks]</td> 
                     <td>$result[ScoreObtained]</td> 
                     </tr>"; 
                 $total_marks = $result['Score']; 
             } 
             echo "<tr class='total_marks'> <td ></td> 
-                    <td class='total_marks'>Total Marks</td> 
+                    <td class='total_marks'>Score</td> 
                     <td>$total_marks</td> 
                     </tr>"; 
             if ($position != 0) 
