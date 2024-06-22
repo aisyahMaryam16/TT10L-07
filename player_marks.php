@@ -13,11 +13,11 @@
         group by player.IcNumber order by result.Score desc"; 
          
     $data = mysqli_query($connect, $sql); 
-    $bil = 0; 
+    $No = 0; 
     while ($result = mysqli_fetch_array($data)) { 
-        $bil = $bil + 1; 
+        $No = $No + 1; 
         if ($result['IcNumber'] == $IcNumber) 
-            $position = $bil; 
+            $position = $No; 
              
     }// tamat while 
 ?> 
