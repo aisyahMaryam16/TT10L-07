@@ -31,7 +31,7 @@ exit();
      
         $sql = "select * from aspect where AspectID = '$AspectID' "; 
         $result = mysqli_query($connect, $sql);
-        if (mysqli_num_rows(4result) == 0) {
+        if (mysqli_num_rows($result) == 0) {
             echo "<br><center>Error: aspect not found</center>";
             exit();
         }
@@ -45,8 +45,8 @@ exit();
 <link rel="stylesheet" href="form.css"> 
 <link rel="stylesheet" href="button.css"> 
  
-<h3 class="long">ASPECT UPDATE</h3> 
-<form class="long" action="aspect_update.php" method="post"> 
+<h3 class="medium">ASPECT UPDATE</h3> 
+<form class="medium" action="aspect_update.php" method="post"> 
 <table> 
     <tr> 
         <td>ID</td> 
