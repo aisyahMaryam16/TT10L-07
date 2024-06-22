@@ -25,8 +25,8 @@
                 <td>$player[StewardID]</td> 
                 <td>$player[SupervisorID]</td> 
                 <<td>{$maskedPassword}</td>
-                <td><a href='player_update.php?IcNumber=$player[IcNumber]'>update</a></td> 
-                <td><a href='player_delete.php?IcNumber=$player[IcNumber]'>delete</a></td> 
+                <td><a href='player_update.php?IcNumber=$player[IcNumber]'class='btn edit'>update</a></td> 
+                <td><a href='player_delete.php?IcNumber=$player[IcNumber]'class='btn btn-danger'>delete</a></td> 
             </tr>"; 
         } //tamat while 
     ?> 
