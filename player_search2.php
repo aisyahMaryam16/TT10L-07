@@ -28,7 +28,6 @@ if (isset($_POST['IcNumber'])) {
  
 <link rel="stylesheet" href="list.css"> 
 <table> 
-    <caption >PLAYER INFORMATION</caption> 
     <tr> 
         <th>Information</th> 
         <th>Data</th> 
