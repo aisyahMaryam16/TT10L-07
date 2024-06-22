@@ -72,11 +72,6 @@ ob_start();
 </head>
 <body>
 
-    <video autoplay loop muted>
-        <source src="202406072335.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
     <div class="wrapper">
         <form action="" method="post">
     <h1>Login</h1>
