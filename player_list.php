@@ -5,7 +5,7 @@
  
     <link rel="stylesheet" href="list.css"> 
  
-    <table> 
+    <table>  
     <tr> 
         <th>Ic Number</th> 
         <th>Name</th> 
