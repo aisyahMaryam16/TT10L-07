@@ -20,3 +20,8 @@ button {
 button:hover {
   background: #e53935; 
 }
+
+button.print{
+    width: 150;
+    top: -450;
+}
