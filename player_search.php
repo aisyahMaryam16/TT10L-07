@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="form.css"> 
     <link rel="stylesheet" href="button.css"> 
      
-    <h3 class="long">SEARCH</h3> 
-    <form class="long" action="player_search2.php" method="post"> 
+    <h3 class="short">SEARCH</h3> 
+    <form class="short" action="player_search2.php" method="post"> 
     <table> 
         <tr> 
-            <td>Player Name</td> 
+            <td>Player</td> 
             <td> 
                 <select name="IcNumber"> 
                     <?php 
@@ -19,7 +19,7 @@
                     $data = mysqli_query($connect, $sql); 
                     while ($player = mysqli_fetch_array($data)) { 
                         echo "<option value='$player[IcNumber]'>$player[IcNumber] : 
-                            $player[PlayerName]</option>"; 
+                            $player[Player]</option>"; 
                     } 
                 ?> 
             </select> 
