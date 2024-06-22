@@ -25,31 +25,31 @@ if (isset($_POST['IcNumber'])) {
     exit;
 }
 ?>
- 
-<link rel="stylesheet" href="list.css"> 
-<table> 
-    <tr> 
-        <th>Information</th> 
-        <th>Data</th> 
-    </tr> 
-    <tr> 
-        <td class="result">Ic Number</td> 
-        <td class="result"><?php echo $IcNumber; ?></td> 
-    </tr> 
-    <tr> 
-        <td class="result">Name</td> 
-        <td class="result"><?php echo $playerName; ?></td> 
-    </tr> 
-    <tr> 
-        <td class="result">Steward ID</td> 
-        <td class="result"><?php echo $StewardID; ?></td> 
-    </tr> 
-    <tr> 
-        <td class="result">Supervisor ID</td> 
-        <td class="result"><?php echo $SupervisorID; ?></td> 
-    </tr> 
-    <tr> 
-        <td class="result">Password</td> 
-        <td class="password"><?php echo $password; ?></td> 
-    </tr> 
+
+<link rel="stylesheet" href="list.css">
+<table>
+    <tr>
+        <th>Information</th>
+        <th>Data</th>
+    </tr>
+    <tr>
+        <td class="result">Ic Number</td>
+        <td class="result"><?php echo $IcNumber; ?></td>
+    </tr>
+    <tr>
+        <td class="result">Name</td>
+        <td class="result"><?php echo $playerName; ?></td>
+    </tr>
+    <tr>
+        <td class="result">Steward ID</td>
+        <td class="result"><?php echo $StewardID; ?></td>
+    </tr>
+    <tr>
+        <td class="result">Supervisor ID</td>
+        <td class="result"><?php echo $SupervisorID; ?></td>
+    </tr>
+    <tr>
+        <td class="result">Password</td>
+        <td class="password"><?php echo $password; ?></td>
+    </tr>
 </table>
