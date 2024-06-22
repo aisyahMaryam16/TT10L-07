@@ -46,17 +46,17 @@ if (isset($_POST["submit"])) {
     <table>
         <tr>
             <td>ID</td>
-            <td><input type="text" name="StewardID"></td>
+             <td><input type="text" name="StewardID" value="<?php echo $newStewardID; ?>" readonly></td>
         </tr>
         <tr>
-            <td>Steward Name</td>
-            <td><input type="text" name="StewardName"></td>
+            <td>Name</td>
+            <td><input type="text" name="steward" required></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><input type="text" name="password"></td>
+            <td><input type="password" name="password" required></td>
         </tr>
     </table>
-    <button class="add" type="submit" name="submit" >Add</button>
+    <button class="add" type="submit" name="submit">Add</button>
 </form>
         
