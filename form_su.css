@@ -6,19 +6,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-@keyframes animatedBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 0; }
-  }
-  
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1; /* Place the video behind other content */
-  }
+
   
   .content {
     position: relative; /* Establish a new positioning context */
