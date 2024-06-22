@@ -74,9 +74,7 @@
         </td> 
     </tr> 
 </table> 
-    <button class="add" type="submit" name="submit"> 
-       
-    </button> 
+    <button class="add" type="submit" name="submit">add</button> 
 </form> 
 
                    
