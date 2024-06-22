@@ -25,7 +25,7 @@
                     $sql = "select * from player where StewardID = '$StewardID' "; 
                     $data = mysqli_query($connect, $sql); 
                     while ($player = mysqli_fetch_array($data)) { 
-                        echo "<option value ='$player[IcNumber]'>$player[PlayerName]</option>"; 
+                        echo "<option value ='$player[IcNumber]'>$player[player]</option>"; 
                     } 
                 ?> 
                 </select> 
