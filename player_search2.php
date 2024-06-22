@@ -37,8 +37,8 @@ if (isset($_POST['IcNumber'])) {
         <td class="result"><?php echo $IcNumber; ?></td> 
     </tr> 
     <tr> 
-        <td class="result">Player Name</td> 
-        <td class="result"><?php echo $PlayerName; ?></td> 
+        <td class="result">Name</td> 
+        <td class="result"><?php echo $playerName; ?></td> 
     </tr> 
     <tr> 
         <td class="result">Steward ID</td> 
