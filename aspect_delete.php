@@ -7,8 +7,8 @@
         $sql = "delete from aspect where AspectID = '$AspectID'";
         $result  = mysqli_query($connect, $sql);
         if ($result == true) {
-            $NO = mysqli_affected_rows($connect);
-            if ($NO > 0)
+            $No = mysqli_affected_rows($connect);
+            if ($No > 0)
                 echo "<script>alert('successfully deleted');
                 window.location='aspect_list.php</script>";
             else
@@ -27,12 +27,12 @@
 <link rel="stylesheet" href="button.css">
    
 <h3 class="long">DELETE ASPECT</h3>
-<form class="long" action="aspect_delete.php" method="post">
-    <table>
-    <tr>
-        <td>Aspect ID</td>
-        <td><input type="text" name="AspectID" value = "<?php echo $AspectID; ?>" ></td>
-    </tr>
-    </table>
-    <button class="delete" type="submit" name="submit">Delete</button>
+<form class="short" action="aspect_delete.php" method="post">
+       <table>
+        <tr>
+            <td>CriteriaID</td>
+            <td><input type="text" name="AspectID" value = "<?php echo $AspectID; ?>" ></td>
+        </tr>
+       </table>
+       <button class="delete" type="submit" name="submit">Delete</button>
 </form>

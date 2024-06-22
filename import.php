@@ -18,7 +18,8 @@ if (isset($_POST["submit"])) {
         if (strtolower($tablename) === "player") {
             $IcNumber = $field[0];
             $player = $field[1];
-            $StewardID = $field[3];
+            $StewardID = $field[2];
+            $SupervisorID = $field[3];
             $password = trim($field[4]);
             
             $sql = "insert into player values('$IcNumber',
@@ -60,12 +61,13 @@ if (isset($_POST["submit"])) {
     <link rel="stylesheet" href="button.css">
     
     <body>
-        <h3 class="long">IMPORT DATA</h3>
-        <form class="long" action="import.php" method="post"
+        <h3 class="import">IMPORT DATA</h3>
+        <form class="import" action="import.php" method="post"
             enctype = "multipart/form-data" class="import">
                 
             <table>
                 <tr>
+                    <td>Table</td>
                     <td>
                         <select name="tablename">
                             <option>player</option>

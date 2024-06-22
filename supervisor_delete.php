@@ -9,8 +9,8 @@
         $result = mysqli_query($connect, $sql);
         
         if ($result == true) {
-            $total = mysqli_affected_rows($connect);
-            if ($total > 0)
+            $NoRec = mysqli_affected_rows($connect);
+            if ($NoRec > 0)
                 echo "<script>alert('successfully deleted');
                 window.location='supervisor_list.php'</script>";
             else
@@ -30,8 +30,8 @@
 <link rel="stylesheet" href="button.css">
 
 
-<h3 class="long">DELETE SUPERVISOR</h3>
-<form class="long" action="supervisor_delete.php" method="post">
+<h3 class="short">DELETE SUPERVISOR</h3>
+<form class="short" action="supervisor_delete.php" method="post">
     
 <table>
     <tr>

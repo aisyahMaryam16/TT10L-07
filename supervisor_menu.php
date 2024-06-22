@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="menu.css">
 
 <body>
-    <div class="menu">
-        <div class="supervisor">
-            <h2>e-MANAGEMENT COMPETITION</h2>
+    <div class="banner">
+        <div class="navbar">
+           <img srs="f1logo.png" class="logo">
             <ul>
                 <li>
                     <a href="#"><b>ASPECT</b></a>
