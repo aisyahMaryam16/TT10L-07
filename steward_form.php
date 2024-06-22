@@ -64,7 +64,7 @@
      
     <script type="text/javascript"> 
          
-        function count_Score() { 
+        function count_total() { 
              
         var tot_all = 0; 
          
