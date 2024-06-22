@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="menu.css"> 
  
 <body> 
-    <div class="menu"> 
-    <div class="player"> 
-        <h2>Competition E-Management</h2> 
+    <div class="banner"> 
+    <div class="navbar"> 
+        <img src="f1logo.png" class="logo">
         <ul> 
             <li> <a href="player_home.php"> <b>HOME</b></a> </li> 
         </ul> 

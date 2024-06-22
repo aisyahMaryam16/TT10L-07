@@ -13,9 +13,9 @@
         $result = mysqli_query($connect, $sql);
         
         if ($result == true)
-            echo "<script>alert('Successfully added');
-           window.location='steward_contestant.php'</script>";
+            echo "<script>alert('successfully added');
+           window.location='steward_player.php'</script>";
            else
-            echo "<br><center>Ralat : $sql<br>".mysqli_error($steward)."</center>";
-        } 
+            echo "<br><center>Error : $sql<br>".mysqli_error($connect)."</center>";
+        } // tamat while
     ?>
