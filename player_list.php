@@ -18,12 +18,13 @@
     <?php 
         $sql = "select * from player"; 
         $result = mysqli_query($connect, $sql); 
-        while($player = mysqli_fetch_array($result)) { 
+        while($player = mysqli_fetch_array($result)) {
+            $maskedPassword = str_repeat('*', strlen($player['password']));
          echo "<tr> <td>$player[IcNumber]</td> 
-                <td class='name'>$player[PlayerName]</td> 
+                <td class='name'>$player[player]</td> 
                 <td>$player[StewardID]</td> 
                 <td>$player[SupervisorID]</td> 
-                <td>$player[Password]> 
+                <<td>{$maskedPassword}</td>
                 <td><a href='player_update.php?IcNumber=$player[IcNumber]'>update</a></td> 
                 <td><a href='player_delete.php?IcNumber=$player[IcNumber]'>delete</a></td> 
             </tr>"; 
