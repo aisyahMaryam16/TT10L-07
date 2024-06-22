@@ -50,7 +50,7 @@ $SupervisorID = $value['SupervisorID'];
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="button.css">
 
-<h3 class="long">PLAYER UPDATE</h3>
+<h3 class="long">UPDATE PLAYER</h3>
 
 <form class="long" action="player_update.php" method="post">
     <table>
