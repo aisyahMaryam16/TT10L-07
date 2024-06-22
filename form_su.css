@@ -102,6 +102,13 @@ select option[placeholder] {
     color: white;
 }
 
+.wrapper .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
 
 /* Button Styles */
 .wrapper .btn {
