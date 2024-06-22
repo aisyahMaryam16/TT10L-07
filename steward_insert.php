@@ -41,11 +41,11 @@ if (isset($_POST["submit"])) {
 <link rel="stylesheet" href="button.css">
 
 
-<h3 class="long">ADD STEWARD</h3>
-<form class="long" action="steward_insert.php" method="post">
+<h3 class="medium">ADD STEWARD</h3>
+<form class="medium" action="steward_insert.php" method="post">
     <table>
         <tr>
-            <td>Steward ID</td>
+            <td>ID</td>
             <td><input type="text" name="StewardID"></td>
         </tr>
         <tr>
