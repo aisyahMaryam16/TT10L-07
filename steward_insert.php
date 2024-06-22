@@ -40,13 +40,12 @@ if (isset($_POST["submit"])) {
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="button.css">
 
-
 <h3 class="medium">ADD STEWARD</h3>
 <form class="medium" action="steward_insert.php" method="post">
     <table>
         <tr>
             <td>ID</td>
-             <td><input type="text" name="StewardID" value="<?php echo $newStewardID; ?>" readonly></td>
+            <td><input type="text" name="StewardID" value="<?php echo $newStewardID; ?>" readonly></td>
         </tr>
         <tr>
             <td>Name</td>
@@ -59,4 +58,3 @@ if (isset($_POST["submit"])) {
     </table>
     <button class="add" type="submit" name="submit">Add</button>
 </form>
-        
