@@ -27,7 +27,7 @@
 <table> 
     <caption>Player Name : <?php echo $name ?></caption> 
     <tr> 
-        <th>Aspect Name</th> 
+        <th>Aspect</th> 
         <th>Total Marks</th> 
         <th>Score Obtained</th> 
     </tr> 
@@ -36,8 +36,8 @@
             join aspect on result.AspectID = aspect.AspectID 
             where IcNumber = '$IcNumber' "; 
         $data = mysqli_query($connect, $sql); 
-        $total = mysqli_num_rows($data); 
-        if ($total > 0)  
+        $NoRec = mysqli_num_rows($data); 
+        if ($NoRec > 0)  
 { 
             while ($result = mysqli_fetch_array($data))  
 { 
