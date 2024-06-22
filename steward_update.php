@@ -1,42 +1,37 @@
 <?php
     include("connect.php");
     include("supervisor_menu.php");
-
+    
     if (isset($_POST["submit"])) {
         $StewardID = $_POST["StewardID"];
         $steward = $_POST["steward"];
         $password = $_POST["password"];
         
-                // Escape the input to prevent SQL injection
+        // Escape the input to prevent SQL injection
         $StewardID = mysqli_real_escape_string($connect, $StewardID);
         $steward = mysqli_real_escape_string($connect, $steward);
         $password = mysqli_real_escape_string($connect, $password);
+
+        $sql = "UPDATE steward SET password='$password', steward='$steward' WHERE StewardID='$StewardID'";
         
-        $sql = "update steward set password='$password', steward = 'steward'
-                where StewardID = '$StewardID'
-";
-       $result = mysqli_query($connect, $sql);
+        $result = mysqli_query($connect, $sql);
         if ($result == true)
-            echo "<script>alert('Successfully Update');
-            window.location='steward_list.php'</script>";
+            echo "<script>alert('Successfully Updated'); window.location='steward_list.php'</script>";
         else
-            echo "<br><center>Error : $sql<br>".mysqli_error($connect)."</center>";
+            echo "<br><center>Error : $sql<br>" . mysqli_error($connect) . "</center>";
     }
     
     
     if (isset($_GET['StewardID']))
         $StewardID = $_GET['StewardID'];
         
-    $sql = "select * FROM steward WHERE StewardID = '$StewardID'
-";
+    $sql = "SELECT * FROM steward WHERE StewardID='$StewardID'";
     $result = mysqli_query($connect, $sql);
     while($steward = mysqli_fetch_array($result)) {
         $password = $steward['password'];
-        $Steward_name = $steward['steward'];
+        $steward_name = $steward['steward'];
     }
 ?>
-
-
 
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="button.css">
