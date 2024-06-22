@@ -8,9 +8,9 @@
     <table> 
     <tr> 
         <th>Ic Number</th> 
-        <th>Player Name</th> 
-        <th>Steward ID</th> 
-        <th>Supervisor ID</th> 
+        <th>Name</th> 
+        <th>Steward</th> 
+        <th>Supervisor</th> 
         <th>Password</th> 
         <th colspan="2">Action</th> 
     </tr> 
