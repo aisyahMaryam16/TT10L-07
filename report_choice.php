@@ -19,7 +19,7 @@
                     $sql = "select * from steward"; 
                     $data = mysqli_query($connect, $sql); 
                     while ($steward = mysqli_fetch_array($data)) { 
-                        echo "<option value='$steward[StewardID]'>$steward[StewardName]</option>"; 
+                        echo "<option value='$steward[StewardID]'>$steward[steward]</option>"; 
                 } 
             ?> 
             </select> 
