@@ -1,5 +1,6 @@
 <?php
         include('connect.php');
+
         if (isset($_POST['IcNumber'])) {
         $IcNumber = $_POST["IcNumber"];
         $player = $_POST["player"];
@@ -8,15 +9,17 @@
         $password = $_POST["password"];
 
     
-        $sql = "insert into player values('$IcNumber', '$player', '$StewardID', 
-        '$SupervisorID', '$password')";
-        $result = mysqli_query($connect, $sql);
-        if ($result)
-            echo "<script>alert('successfully signed up')</script>";
-        else
-            echo "<script>alert('sign up was unsuccessful')</script>";
+    $sql = "INSERT INTO player (IcNumber, player, StewardID, SupervisorID, password) VALUES ('$IcNumber', '$player', '$StewardID', '$SupervisorID', '$password')";
+    $result = mysqli_query($connect, $sql);
+
+    if ($result) {
+        echo "<script>alert('Successfully signed up.')</script>";
+        echo "<script>window.location='login.php'</script>";
+    } else {
+        echo "<script>alert('Sign up was unsuccessful.')</script>";
         echo "<script>window.location='login.php'</script>";
     }
+}
 ?>
 
 
