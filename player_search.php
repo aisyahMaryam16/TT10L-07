@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="form.css"> 
     <link rel="stylesheet" href="button.css"> 
      
-    <h3 class="short">SEARCH</h3> 
+    <h3 class="short">SEARCH PLAYER</h3> 
     <form class="short" action="player_search2.php" method="post"> 
     <table> 
         <tr> 
