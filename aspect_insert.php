@@ -40,7 +40,7 @@ if (isset($_POST["submit"])) {
 <link rel="stylesheet" href="form.css">
 <link rel="stylsheet" href="button.css">
    
-<h3 class="long">ADD ASPECT</h3>
+<h3 class="medium">ADD ASPECT</h3>
    
 <form class="medium" action="aspect_insert.php" method="post">
     <table>
