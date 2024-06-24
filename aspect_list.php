@@ -11,7 +11,7 @@
     <tr>
         <th>ID</th>
         <th>Aspect</th>
-        <th>Total Marks</th>
+        <th>Marks</th>
         <th colspan="2">Action</th>
     </tr>
     <?php
@@ -22,8 +22,8 @@
                 <td>$value[AspectID]</td>
                 <td>$value[aspect]</td>
                 <td>$value[TotalMarks]</td>
-                <td><a href='aspect_update.php?AspectID=$value[AspectID]'>update</a></td>
-                <td><a href='aspect_delete.php?AspectID=$value[AspectID]'>delete</a></td>
+                <td><a href='aspect_update.php?AspectID=$value[AspectID]'class='btn edit'>update</a></td>
+                <td><a href='aspect_delete.php?AspectID=$value[AspectID]'class='btn btn-danger'>delete</a></td>
                 </tr>";
         }
     ?>
