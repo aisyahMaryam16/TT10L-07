@@ -6,13 +6,8 @@
     <link rel="stylesheet" href="form.css"> 
     <link rel="stylesheet" href="button.css"> 
     <body> 
-
         <h3 class = "report">CHOICE OF REPORT</h3> 
         <form class = "report" action="report_print.php" method="post"> 
-
-        <h3 class = "short">CHOICE OF REPORT</h3> 
-        <form class = "short" action="report_print.php" method="post"> 
-
             <select ID='choice' name='choice' onchange='show_choice()'> 
             <option value=1>Full List</option> 
             <option value=2>List BY Steward</option> 
@@ -23,11 +18,8 @@
                     include('connect.php'); 
                     $sql = "select * from steward"; 
                     $data = mysqli_query($connect, $sql); 
-                    while ($steward = mysqli_fetch_array($data)) { 
-
-                        echo "<option value='$steward[StewardID]'>$steward[steward]</option>"; 
-
-                        echo "<option value='$steward[StewardID]'>$steward[StewardName]</option>"; 
+                    while ($steward = mysqli_fetch_array($data)) {
+                        echo "<option value='$steward[StewardID]'>$steward[steward]</option>";  
                 } 
             ?> 
             </select> 
