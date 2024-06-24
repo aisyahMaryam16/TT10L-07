@@ -22,8 +22,8 @@
           <td>{$supervisor['SupervisorID']}</td>
                 <td>{$supervisor['supervisor']}</td>
                 <<td>{$maskedPassword}</td>
-                <td><a href='supervisor_update.php?SupervisorID={$supervisor['SupervisorID']}'>update</a></td>
-                <td><a href='supervisor_delete.php?SupervisorID={$supervisor['SupervisorID']}'>delete</a></td>
+                <td><a href='supervisor_update.php?SupervisorID={$supervisor['SupervisorID']}'class='btn edit'>update</a></td>
+                <td><a href='supervisor_delete.php?SupervisorID={$supervisor['SupervisorID']}'class='btn btn-danger'>delete</a></td>
               </tr>";
           
         
