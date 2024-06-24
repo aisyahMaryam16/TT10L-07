@@ -30,10 +30,6 @@ if (isset($_POST['IcNumber'])) {
     <link rel="stylesheet" href="form_su.css">
 </head>
 <body>
-    <video autoplay loop muted>
-        <source src="202406072335.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
     
     <div class="wrapper">
     <form class="long" action="signup.php" method="post">
