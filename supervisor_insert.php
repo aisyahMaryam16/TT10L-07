@@ -12,7 +12,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     $lastID = $row['SuppervisorID'];
     
     // Extract the numeric part of the lastID and increment it
-    $num = intval(sustr($lastID, 2)) + 1;
+    $num = intval(substr($lastID, 2)) + 1;
     $newSupervisorID = 'SP' . $num;
 } else {
     // If no records found start with SP1
@@ -48,13 +48,13 @@ if ($result && mysqli_num_rows($result) > 0) {
     <table>
     
     <tr>
-        <td>Supervisor ID</td>
+        <td>ID</td>
         <td><input type="text" name="SupervisorID" value="<?php echo
         $newSupervisorID; ?>" readonly></td>
     </tr>
     
     <tr>
-        <td>Supervisor Name</td>
+        <td>Name</td>
         <td><input type="text" name="supervisor" required ></td>
     </tr>
     
