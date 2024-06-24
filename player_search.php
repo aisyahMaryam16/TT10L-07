@@ -20,12 +20,20 @@
                     while ($player = mysqli_fetch_array($data)) { 
                         echo "<option value='$player[IcNumber]'>$player[IcNumber] : 
 
+
+
+                            $player[Player]</option>"; 
+
+
                             $player[player]</option>"; 
                     } // tamat while 
 
                             $player[PlayerName]</option>"; 
 
+
                             $player[Player]</option>"; 
+
+
 
                     } 
                 ?> 
