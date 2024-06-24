@@ -26,11 +26,11 @@
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="button.css">
    
-<h3 class="long">DELETE ASPECT</h3>
+<h3 class="short">DELETE ASPECT</h3>
 <form class="short" action="aspect_delete.php" method="post">
        <table>
         <tr>
-            <td>CriteriaID</td>
+            <td>AspectID</td>
             <td><input type="text" name="AspectID" value = "<?php echo $AspectID; ?>" ></td>
         </tr>
        </table>
