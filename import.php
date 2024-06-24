@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
     while (!feof($file)) {
         $field = explode(",", fgets($file));
         
-        $Success = false;
+        $success = false;
         
         if (strtolower($tablename) === "player") {
             $IcNumber = $field[0];
