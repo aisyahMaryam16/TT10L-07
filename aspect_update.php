@@ -50,7 +50,7 @@ exit();
 <table> 
     <tr> 
         <td>ID</td> 
-        <td><input type="text" name="AspectID" value= "<?php echo $AspectID; ?>"></td> 
+        <td><input type="text" name="AspectID" value= "<?php echo $AspectID; ?>" readonly></td> 
     </tr> 
     <tr> 
         <td>Aspect</td> 
@@ -61,5 +61,5 @@ exit();
         <td><input type="text" name="TotalMarks" value= "<?php echo $TotalMarks; ?>"></td> 
     </tr> 
     </table> 
-<button class="update" type="submit" name="submit">update</button> 
+<button class="update" type="submit" name="submit">Update</button> 
 </form>
