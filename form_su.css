@@ -1,0 +1,149 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(logintrack.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Prevent background overflow */
+}
+
+/* Content styling */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Form Wrapper */
+.wrapper {
+    width: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Styles */
+.input-box {
+    position: relative;
+    margin: 30px 0;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 40px;
+    font-size: 16px;
+    color: white; /* Default text color */
+    padding: 0 20px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: white;
+}
+
+/* Adjusting font colors */
+select {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 40px;
+    font-size: 16px;
+    color: white; /* Default text color */
+    padding: 0 20px;
+    transition: border-color 0.3s ease;
+}
+
+/* Dropdown font color */
+select option {
+    color: black;
+}
+
+/* Placeholder color */
+select option[disabled],
+select option[placeholder] {
+    color: white;
+}
+
+/* Button Container Styles */
+.wrapper .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.wrapper .btn {
+    width: 48%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.wrapper .btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* Additional styles */
+select.marks {
+    width: 200px;
+    padding: 3px;
+    margin: 2px;
+}
+
+td.marks_ {
+    font-weight: bold;
+    text-align: center;
+}
+
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3) {
+    width: 100px;
+    text-align: center;
+}
+
+table.markah {
+    margin-top: 5px;
+    width: 430px;
+}

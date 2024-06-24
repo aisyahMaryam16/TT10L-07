@@ -1,0 +1,149 @@
+h2{
+    font-family: verdana;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: mintcream;
+    
+    margin: 0px auto;
+    padding-bottom: -10px;
+    padding-right: 50px;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(blackbrick.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.logo{
+    cursor: pointer;
+    margin-left: 250px;
+    transform: translateX(-460px);
+    width: 160px; 
+    height: 150px;
+}
+.navbar {
+    width: 85%;             /* Sets the width of the navbar */
+    margin-left: 220px;     /* Adds left margin to position it horizontally */
+    margin-top: -80px;      /* Adjusts the top margin, potentially for positioning */
+    padding: 40px 0;        /* Adds padding inside the navbar */
+    display: flex;          /* Uses flexbox for layout */
+    align-items: center;    /* Aligns items vertically */
+    justify-content: space-between; /* Distributes items evenly along the main axis */
+    z-index: 1000;          /* Sets the stacking order */
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff; /* set text color to white */
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px;
+    display: block;
+    align-items: center;
+    
+}
+
+body{
+    margin: 0px;
+}
+
+div {
+    text-align: center;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+div.player{
+    width: 360px;
+}
+
+div.steward{
+    width: 500px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+li ul {
+    display: none;
+}
+
+ul li a {
+    font-family: verdana;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    color: mintcream;
+    
+    width: 120px;
+    padding: 10px;
+    border: none;
+    margin: 0px;
+    background-color: transparent; /* remove background color */
+    
+    display: block;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: whitesmoke;
+    background-color: transparent; /* remove background color */
+}
+ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position dropdown below parent */
+    left: 100%; /* Center horizontally */
+    transform: translateX(1%); /* Adjust for centering */
+    background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
+    z-index: 1001; /* Ensure dropdown appears above other content */
+}
+
+li ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #9d2727;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: 1s;
+}
+
+li ul li:hover::after {
+  width: 100%;
+}
+
+li:hover ul {
+    display: block;
+    position: absolute;
+    left: -20px;
+}
+
+li:hover li {
+    float: none;
+}
+
+li:hover a {
+    color: white;
+    background-color: transparent; /* remove background color */
+}

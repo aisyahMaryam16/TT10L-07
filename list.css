@@ -1,0 +1,87 @@
+body {
+    background-image: url(blackbrick.jpg);
+    overflow-x: hidden;
+}
+
+table {
+    position: absolute;
+    left: 50%;
+    top: 180px; /* fixed top position */
+    transform: translate(-50%, 0); /* only translate horizontally */
+    font-family: verdana;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    
+    padding: 20px;
+    width: 650px;
+    margin: 0.5px auto;
+    border-collapse: collapse;
+    box-shadow: 15px 15px 6px rgba();
+    background-color: #f2f2f2;
+}
+
+caption {
+    font-size: 16px;
+    font-weight: bold;
+    color : floralwhite;
+    padding : 8px;
+}
+
+td, th {
+    padding: 10px;
+    border: 2px solid dimgrey;
+}
+
+td.name {
+    width: 150px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: darkgrey;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+}
+
+th {
+    font-weight: bold;
+    color:white;
+    background-color: darkgrey;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #5bc0de;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+}
+
+button.edit {
+    background-color: #00FF00;
+}
+
+button.edit:hover {
+    background-color: #45a049;
+
+}
+
+.btn-danger {
+    background-color: #d9534f;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}

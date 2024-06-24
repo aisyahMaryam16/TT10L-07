@@ -1,0 +1,166 @@
+body {
+    background-image: url(blackbrick.jpg);
+    display: flex; /* Enable flexbox for the body */
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: hidden; /* Enable vertical scrollbar if needed */
+}
+
+h3 {
+    font-family: verdana;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color:mintcream;
+    
+    padding:5px 60px;
+    border-radius: 100px 100px 0 0;
+    margin: 100px auto 0px;
+    background-color: #f44336;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 50%;
+    top: 17.0%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap; /* allow form elements to wrap to the next line */
+    justify-content: center; /* center form elements horizontally */
+}
+
+form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    color: black;
+     
+    padding: 60px;
+    border: 1px solid black;
+    border-radius:0px 0px 20px 20px;
+    margin: 0.5px auto;
+    background-color:rgba(192, 192, 192, 1);
+    box-shadow: 5px 5px 6px 1px rgba(96, 96, 96, 0.7);
+    display: flex;
+    flex-wrap: wrap; /* allow form elements to wrap to the next line */
+    justify-content: center; /* center form elements horizontally */
+
+}
+
+form.short{
+    width:250px;
+    top: 42.6%;
+}
+h3.short{
+    width: 250px;
+    top: 15%;
+}
+form.medium {
+    width:250px;
+    top: 48.1%;
+}
+h3.medium {
+    width: 250px;
+    top: 15%;
+}
+form.long{
+    width:300px;
+    top: 53.5%;
+}
+h3.long{
+    width: 300px;
+    top: 15%;
+}
+form.import{
+    width: 250px;
+    top: 44.3%;
+}
+h3.import{
+    width: 250px;
+    top: 15%; 
+}
+form.report{
+    width: 250px;
+    top: 42.3%;
+    min-height: 128;
+}
+h3.report{
+    width: 250px;
+    top: 11.6%;
+}
+
+form.marks {
+    border-radius: 18px;
+    font-size: 18px;
+    width:350px;
+    top: 47.5%
+    
+     
+}
+
+table {
+    font-family: verdana;
+    font-size: 12px;
+}
+/* cantumkan
+sekali
+
+*/
+input[type="text"],
+input[type="password"],
+select {
+    width: 200px;
+    padding:5px;
+    margin: 5px;
+    border: 2px solid white;
+    color: black;
+    border-radius: 15px;
+}
+
+input.marks{
+    width: 70px;
+    padding:3px;
+    margin: 2px;
+    text-align: center;
+}
+
+select.marks{
+    width: 200px;
+    padding:3px;
+    margin: 2px;
+}
+
+td.marks_{
+    font-weight: bold;
+    text-align: center;
+}
+
+td:nth-child(1) {
+    width: 100px;
+    text-align: left;
+}
+
+td:nth-child(2) {
+    width: 100px;
+    text-align: center;
+}
+
+td:nth-child(3) {
+    width: 150px;
+    text-align: center;
+}
+
+table.marks {
+    margin-top : 5px;
+    width : 430px;
+}
+
+th {
+    padding-bottom : 5px;
+}
